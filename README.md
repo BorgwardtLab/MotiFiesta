@@ -47,7 +47,7 @@ Output from running [mfinder](https://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.U
 
 Citation
 
-```
+```bibtex
 @article{oliver2022approximate,
   title={Approximate Network Motif Mining Via Graph Learning},
   author={Oliver, Carlos and Chen, Dexiong and Mallet, Vincent and Philippopoulos, Pericles and Borgwardt, Karsten},
