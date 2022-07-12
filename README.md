@@ -1,4 +1,4 @@
-[![](http://img.shields.io/badge/cs.LG-arXiv%3A2206.01008-B31B1B.svg)](https://arxiv.org/abs/2206.01008)
+[![](http://img.shields.io/badge/cs.LG-arXiv%3A2206.01008-B31B1B.svg)][1]
 
 ![](motifiesta.png)
 
@@ -63,3 +63,4 @@ Citation
   year={2022}
 }
 ```
+[1]: https://arxiv.org/abs/2206.01008
