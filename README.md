@@ -1,5 +1,11 @@
 [![](http://img.shields.io/badge/cs.LG-arXiv%3A2206.01008-B31B1B.svg)](https://arxiv.org/abs/2206.01008)
 
+The repository implements the MotiFiesta algorithm described in the following paper:
+
+>Carlos Oliver, Dexiong Chen, Vincent Mallet, Pericles Philippopoulos, Karsten Borgwardt.
+[Approximate Network Motif Mining Via Graph Learning][1]. Preprint 2022.
+
+
 # MotiFiesta: Neural Approximate Motif Mining
 
 ## Setup
