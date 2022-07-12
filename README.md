@@ -41,3 +41,15 @@ for graph in decoded_graphs:
 Scripts for generating figures in the paper are in `fig_scripts/`
 
 Output from running [mfinder](https://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.UriAlon/files/uploads/NetworkMotifsSW/mfinder/mfindermanual.pdf) are in `data_mfinder` and `out_mfinder`, the script `minder_benchmark.py` parses this output.
+
+
+Citation
+
+```
+@article{oliver2022approximate,
+  title={Approximate Network Motif Mining Via Graph Learning},
+  author={Oliver, Carlos and Chen, Dexiong and Mallet, Vincent and Philippopoulos, Pericles and Borgwardt, Karsten},
+  journal={arXiv preprint arXiv:2206.01008},
+  year={2022}
+}
+```
