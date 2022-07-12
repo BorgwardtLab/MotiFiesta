@@ -1,3 +1,5 @@
+http://img.shields.io/badge/cs.LG-arXiv%3A2206.01008-B31B1B.svg
+
 # MotiFiesta: Neural Approximate Motif Mining
 
 ## Setup
