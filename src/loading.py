@@ -1,3 +1,4 @@
+import os
 import math
 
 import torch
@@ -13,7 +14,9 @@ def get_loader(root,
                batch_size=2,
                **kwargs
                ):
-    if not root.lower().startswith('synth'):
+    name = os.path.basename(root)
+    print("NAME ",  name)
+    if not name.startswith('synth'):
         print(f"TU dataset {root}")
         if root == 'IMDB-BINARY':
             print("HELLO")
