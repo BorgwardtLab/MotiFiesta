@@ -1,6 +1,7 @@
 """
 Get table of sp miner results
 """
+import sys
 import os
 import pickle
 from itertools import permutations
@@ -8,7 +9,10 @@ from itertools import permutations
 import pandas as pd
 import torch
 
-from MotifPool.src.loading import get_loader
+sys.path.append("..")
+sys.path.append("../..")
+
+from MotiFiesta_ref.src.loading import get_loader
 
 SP_PATH = os.path.join(os.path.dirname(__file__),
                        "..",
@@ -19,7 +23,7 @@ SP_PATH = os.path.join(os.path.dirname(__file__),
 def jaccard(run_id, dataset_id, top_k=5, n_motifs=1):
     out_path = os.path.join(SP_PATH,run_id +".p")
     graphs = pickle.load(open(out_path, 'rb'))
-    dataset = get_loader(dataset_id)['dataset_whole']
+    dataset = get_loader(root="data", name=dataset_id)['dataset_whole']
     # dict with 'patterns', 'pattern_hashes', 'hashes_to_graph'
     h = graphs['pattern_hashes'][0]
     g = graphs['hashes_to_graphs'][h][0]

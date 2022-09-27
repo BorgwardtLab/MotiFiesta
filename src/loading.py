@@ -6,15 +6,15 @@ from torch.utils.data import random_split
 from torch_geometric.datasets import TUDataset
 from torch_geometric.data import DataLoader
 
-from MotiFiesta.utils.synthetic import SyntheticMotifs
-from MotiFiesta.utils.real_world import RealWorldDataset
+from MotiFiesta_ref.utils.synthetic import SyntheticMotifs
+from MotiFiesta_ref.utils.real_world import RealWorldDataset
 
 
 def get_loader(root,
+               name,
                batch_size=2,
                **kwargs
                ):
-    name = os.path.basename(root)
     print("NAME ",  name)
     if not name.startswith('synth'):
         print(f"TU dataset {root}")
@@ -24,7 +24,7 @@ def get_loader(root,
         else:
             dataset = RealWorldDataset(root=root)
     else:
-        dataset = SyntheticMotifs(root=root, **kwargs)
+        dataset = SyntheticMotifs(root=root, name=name, **kwargs)
     lengths = [math.floor(len(dataset) * .8), math.ceil(len(dataset) * .2)]
     train_data, test_data = random_split(dataset, lengths, generator=torch.Generator().manual_seed(42))
     loader_train = DataLoader(train_data, batch_size=batch_size, shuffle=True)

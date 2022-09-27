@@ -1,2 +1,3 @@
 mkdir models logs data
-export PYTHONPATH=`pwd`/../:$PYTHONPATH
+export PYTHONPATH="/Users/cgonzalez/Projects:"$PYTHONPATH
+echo $PYTHONPATH

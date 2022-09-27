@@ -13,10 +13,8 @@ import os.path as osp
 import random
 import itertools
 
-import seaborn as sns
 import numpy as np
 from numpy.random import normal
-import matplotlib.pyplot as plt
 from scipy.stats import beta
 from scipy.stats import uniform
 from scipy.stats import expon
@@ -320,7 +318,8 @@ def generate_instances(
 class SyntheticMotifs(Dataset):
     def __init__(self,
                  n_motifs=1,
-                 root="synth",
+                 root="data",
+                 name='synth',
                  n_instances=1000,
                  n_graphs=1000,
                  motif_size=5,
@@ -358,7 +357,7 @@ class SyntheticMotifs(Dataset):
         self.max_degree = max_degree
         self.seed = seed
 
-        super(SyntheticMotifs, self).__init__("data/"+root, transform, pre_transform)
+        super(SyntheticMotifs, self).__init__(osp.join(root, name), transform, pre_transform)
 
 
     @property

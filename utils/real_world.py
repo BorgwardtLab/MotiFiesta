@@ -13,10 +13,8 @@ import os.path as osp
 import random
 import itertools
 
-import seaborn as sns
 import numpy as np
 from numpy.random import normal
-import matplotlib.pyplot as plt
 from scipy.stats import beta
 from scipy.stats import uniform
 from scipy.stats import expon
