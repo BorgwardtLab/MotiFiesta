@@ -36,6 +36,12 @@ $ source setup.sh
 $ python utils/build_data.py
 ```
 
+## Untar pre-trained models
+
+```
+$ tar -xzvf models.tar.gz
+```
+
 ## Training a model
 
 ```
