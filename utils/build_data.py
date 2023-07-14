@@ -11,7 +11,8 @@ from torch_geometric.datasets import ZINC
 from torch_geometric.datasets import Reddit
 from torch_geometric.data import DataLoader
 
-from MotiFiesta_ref.utils.synthetic import SyntheticMotifs
+from synthetic import SyntheticMotifs
+
 
 ### OPTIONS
 

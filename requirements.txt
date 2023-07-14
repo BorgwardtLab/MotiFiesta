@@ -4,6 +4,7 @@ scipy
 torch
 networkx
 pytorch-lightning[extra]
+torch_geometric
 igraph
 wwl
 jsonargparse[signatures]
