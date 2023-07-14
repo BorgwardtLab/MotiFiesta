@@ -393,6 +393,9 @@ class SyntheticMotifs(Dataset):
     def __len__(self):
         return len(self.processed_file_names)
 
+    def __get__(self, idx):
+        return self.__getitem__(idx)
+
     def __getitem__(self, idx):
         """ Returns dictionary where 'pos' key stores batch with
         graphs that contain the motif, and the 'neg' key has batches
