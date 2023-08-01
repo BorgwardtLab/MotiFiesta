@@ -7,7 +7,6 @@ import torch
 from igraph import Graph
 from wwl import wwl
 
-
 def build_K(subgraphs, cache=None):
     graph_pairs = ((*c, cache) for c in combinations(subgraphs, 2))
     d = list(starmap(subgraph_sim_dgl, graph_pairs))

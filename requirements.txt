@@ -1,10 +1,14 @@
 numpy
+ogb
 seaborn
+torchviz
+tensorboard
 scipy
 torch
 networkx
 pytorch-lightning[extra]
 igraph
-wwl
+wwl @ git+https://github.com/cgoliver/WWL.git 
 jsonargparse[signatures]
-git+https://github.com/loretoparisi/lshash.git
+deepsnap
+lshashpy3 @ git+https://github.com/loretoparisi/lshash.git

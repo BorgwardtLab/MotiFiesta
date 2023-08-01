@@ -108,10 +108,10 @@ class RealWorldDataset(Dataset):
         for i, g_pyg in enumerate(gs):
             torch.save(g_pyg, osp.join(self.processed_dir, f'data_{i}.pt'))
 
-    def __len__(self):
+    def len(self):
         return len(self.processed_file_names)
 
-    def __getitem__(self, idx):
+    def get(self, idx):
         """ Returns dictionary where 'pos' key stores batch with
         graphs that contain the motif, and the 'neg' key has batches
         without the motif.

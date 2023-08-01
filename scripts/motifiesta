@@ -1,3 +1,5 @@
+#!/urs/bin/env/ python
+
 import sys
 import pickle
 import argparse
@@ -6,9 +8,9 @@ import numpy as np
 import warnings
 warnings.simplefilter("ignore", UserWarning)
 
-from MotiFiesta.src.model import MotiFiesta
-from MotiFiesta.src.loading import get_loader
-from MotiFiesta.src.train import motif_train
+from MotiFiesta.training.model import MotiFiestaModel
+from MotiFiesta.training.loading import get_loader
+from MotiFiesta.training.train import motif_train
 from MotiFiesta.utils.learning_utils import dump_model_hparams
 from MotiFiesta.utils.learning_utils import load_model
 from MotiFiesta.utils.learning_utils import load_data
@@ -30,6 +32,7 @@ if function == 'train':
     parser = argparse.ArgumentParser()
     parser.add_argument("--name", "-n", type=str, default="default")
     parser.add_argument("--dataset", "-da", type=str, default='synthetic')
+    parser.add_argument("--data_root", type=str, default='.')
     parser.add_argument("--restart", "-r", action='store_true', default=False,  help='Restart model.')
 
     # training  loop
@@ -84,7 +87,8 @@ if function == 'train':
 
     print(">>> loading data")
     data = get_loader(
-                      root=hparams['train']['dataset'],
+                      name=args.dataset,
+                      root=args.data_root,
                       batch_size=hparams['train']['batch_size'],
                       attributed=hparams['train']['attributed']
                       )
@@ -103,7 +107,7 @@ if function == 'train':
         optimizer = model_dict['optimizer']
         controller_state = model_dict['controller_state_dict']
     else:
-        model = MotiFiesta(**hparams['model'])
+        model = MotiFiestaModel(**hparams['model'])
         epoch_start, optimizer, controller_state = 0, None, None
     print(model)
 

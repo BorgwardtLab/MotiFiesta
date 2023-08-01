@@ -26,8 +26,7 @@ MotiFiesta is a graph neural network trained to detect over-represented subgraph
 ## Setup
 
 ```
-$ pip install -r requirements.txt
-$ source setup.sh
+$ pip install . 
 ```
 
 ## Build datasets
@@ -45,15 +44,15 @@ $ tar -xzvf models.tar.gz
 ## Training a model
 
 ```
-$ python src/motifiesta.py train -h
-$ python src/motifiesta.py train -da <dataset_id> -n test
+$ motifiesta train -h
+$ motifiesta train -da <dataset_id> -n test
 ```
 
 ## Making motif predictions
 
 
 ```python
-from MotiFiesta.src.decode import HashDecoder
+from MotiFiesta.training.decode import HashDecoder
 
 model_id = 'barbell-d0.00'
 data_id = 'synth-distort-barbell-d0.00'
