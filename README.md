@@ -32,7 +32,7 @@ $ pip install .
 ## Build datasets
 
 ```
-$ python utils/build_data.py
+$ build_data_motifiesta 
 ```
 
 ## Untar pre-trained models
