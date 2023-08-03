@@ -53,12 +53,12 @@ def dump_model_hparams(name, hparams):
     pass
 
 def model_from_json(params):
-    from MotiFiesta.src.model import MotiFiesta
-    model = MotiFiesta(**params['model'])
+    from MotiFiesta.training.model import MotiFiestaModel
+    model = MotiFiestaModel(**params['model'])
     return model
 
 def dataset_from_json(params, background=False):
-    from MotiFiesta.src.loading import get_loader
+    from MotiFiesta.training.loading import get_loader
     data = get_loader(root=params['train']['dataset'],\
                                 batch_size=params['train']['batch_size']\
                                 )

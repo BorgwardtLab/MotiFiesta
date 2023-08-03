@@ -37,6 +37,8 @@ $ build_data_motifiesta
 
 ## Untar pre-trained models
 
+Download pretrained models [here](https://drive.proton.me/urls/BN2X8ZHQAR#UQFR3LELTwhj) and move the tarball to the root of this repository.
+
 ```
 $ tar -xzvf models.tar.gz
 ```
@@ -50,6 +52,8 @@ $ motifiesta train -da <dataset_id> -n test
 
 ## Making motif predictions
 
+This is an example script for assigning each node in a graph to an integer motif ID using a pre-trained model.
+You can also launch this with the command `$ motifiesta_example`
 
 ```python
 from MotiFiesta.training.decode import HashDecoder

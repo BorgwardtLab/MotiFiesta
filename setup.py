@@ -21,6 +21,6 @@ setup(
     install_requires=install_requires,
     packages=find_packages(),
     include_package_data=True,
-    scripts=['scripts/motifiesta', 'scripts/build_data_motifiesta']
+    scripts=['scripts/motifiesta', 'scripts/build_data_motifiesta', 'scripts/motifiesta_example']
 )
 

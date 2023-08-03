@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from lshashpy3 import LSHash
 
 from MotiFiesta.utils.learning_utils import load_model
-from MotiFiesta.src.loading import get_loader
+from MotiFiesta.training.loading import get_loader
 
 class Decoder:
     def __init__(self, model_id, dataset_id):
